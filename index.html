@@ -1,1 +1,25 @@
+# ① フォルダを作る
+mkdir formation-app
+cd formation-app
 
+# ② Vite + React を作る（簡単なReact環境）
+npm create vite@latest
+
+# 質問が出たら：
+# ✔ プロジェクト名: formation-app
+# ✔ フレームワーク: React
+# ✔ 言語: JavaScript
+
+cd formation-app
+npm install
+npm install html2canvas uuid
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+};
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
